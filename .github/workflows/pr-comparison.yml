@@ -5,7 +5,7 @@ on:
     types: [created, edited]
 
 jobs:
-  lint:
+  compare:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,5 +14,5 @@ jobs:
           node-version: 12.11
       - run: yarn install
       - run: node ci/index.js
-        with:
+        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -5,7 +5,7 @@ const TRIGGER_KEYWORD = "@eslint-remote-tester-bot";
 
 async function run() {
   try {
-    const client = getOctokit(core.getInput("GITHUB_TOKEN"));
+    const client = getOctokit(process.env.GITHUB_TOKEN);
 
     if (context.eventName !== "issue_comment") {
       return console.warn(`invalid eventName: (${context.eventName})`);
