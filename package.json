@@ -1,0 +1,14 @@
+{
+  "name": "eslint-remote-tester-bot-test-setups",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint-remote-tester"
+  },
+  "devDependencies": {
+    "eslint": "^7.18.0",
+    "eslint-plugin-local-rules": "^1.0.1",
+    "eslint-remote-tester": "^0.5.0"
+  }
+}
