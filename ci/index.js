@@ -1,18 +1,30 @@
 const core = require("@actions/core");
-const { context } = require("@actions/github");
+const { context, getOctokit } = require("@actions/github");
+
+const TRIGGER_KEYWORD = "@eslint-remote-tester-bot";
 
 async function run() {
   try {
+    const client = getOctokit(core.getInput("GITHUB_TOKEN"));
+
     if (context.eventName !== "issue_comment") {
-      return console.warn(
-        `event name is not 'issue_comment': ${context.eventName}`
-      );
+      return console.warn(`invalid eventName: (${context.eventName})`);
     }
 
     const comment = context.payload.comment.body;
-    core.info(`Found comment (${comment})`);
+    if (!comment.startsWith(TRIGGER_KEYWORD)) return;
 
-    core.setOutput("Exit");
+    const pullRequest = await client.pulls.get({
+      owner: context.repo.owner,
+      repo: context.repo.repo,
+      pull_number: context.issue.number,
+    });
+
+    const prRepository = pullRequest.data.head.repo.full_name;
+    const prBranch = pullRequest.data.head.ref;
+
+    core.info(`prRepository ${prRepository} prBranch ${prBranch}`);
+
   } catch (error) {
     core.setFailed(error.message);
   }
