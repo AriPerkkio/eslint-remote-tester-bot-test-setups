@@ -14,12 +14,12 @@ jobs:
           node-version: 12.11
       - run: yarn install
       - run: node ci/getPullRequestsRepository.js
-        id: get-pr
+        id: getPrBranch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: node ci/index.js
       - uses: actions/checkout@v2
         with:
-          repository: ${{ fromJSON(steps.get-pr.outputs.result).repository }}
-          ref: ${{ fromJSON(steps.get-pr.outputs.result).branch }}
+          repository: ${{ steps.getPrBranch.outputs.repository }}
+          ref: ${{ steps.getPrBranch.outputs.branch }}
       - run: node ci/index.js

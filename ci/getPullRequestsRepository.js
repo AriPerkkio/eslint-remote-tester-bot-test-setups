@@ -22,13 +22,8 @@ async function run() {
       pull_number: context.issue.number,
     });
 
-    const output = {
-      repository: pullRequest.data.head.repo.full_name,
-      branch: pullRequest.data.head.ref,
-    };
-
-    core.setOutput(output);
-    return;
+    core.setOutput('repository', pullRequest.data.head.repo.full_name);
+    core.setOutput('branch', pullRequest.data.head.ref);
   } catch (error) {
     core.setFailed(error.message);
   }
