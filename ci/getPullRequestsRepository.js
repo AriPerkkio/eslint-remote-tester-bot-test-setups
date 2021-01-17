@@ -1,5 +1,5 @@
 const core = require("@actions/core");
-const exec = require('@actions/exec');
+const exec = require("@actions/exec");
 
 const { context, getOctokit } = require("@actions/github");
 
@@ -27,7 +27,8 @@ async function run() {
       branch: pullRequest.data.head.ref,
     };
 
-    return output;
+    core.setOutput(output);
+    return;
   } catch (error) {
     core.setFailed(error.message);
   }
