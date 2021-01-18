@@ -18,8 +18,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: node ci/index.js
+      - run: node ci/saveCache.js
       - uses: actions/checkout@v2
         with:
           repository: ${{ steps.getPrBranch.outputs.repository }}
           ref: ${{ steps.getPrBranch.outputs.branch }}
+      - run: node ci/restoreCache.js
       - run: node ci/index.js
