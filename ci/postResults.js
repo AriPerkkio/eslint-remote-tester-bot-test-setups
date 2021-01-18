@@ -3,7 +3,7 @@ const core = require("@actions/core");
 
 const { context, getOctokit } = require("@actions/github");
 
-const BASE_PATH = 'eslint-remote-tester-results/comparison-results';
+const BASE_PATH = './eslint-remote-tester-results/comparison-results';
 const ADDED = `${BASE_PATH}/added.md`;
 const REMOVED = `${BASE_PATH}/removed.md`;
 
