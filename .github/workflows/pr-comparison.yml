@@ -23,6 +23,8 @@ jobs:
         with:
           repository: ${{ steps.getPrBranch.outputs.repository }}
           ref: ${{ steps.getPrBranch.outputs.branch }}
-      - run: yarn install
       - run: node ci/restoreCache.js
       - run: node ci/index.js
+      - run: node ci/postResults.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
