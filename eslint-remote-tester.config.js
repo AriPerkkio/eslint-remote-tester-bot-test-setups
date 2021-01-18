@@ -10,4 +10,5 @@ module.exports = {
             'local-rules/no-foo': 'error',
         },
     },
+    CI: false,
 };
