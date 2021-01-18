@@ -5,7 +5,7 @@ async function run() {
   try {
     await io.mv(
       ".cache-eslint-remote-tester/.comparison-cache.json",
-      "~/.comparison-cache.json"
+      "/tmp/.comparison-cache.json"
     );
   } catch (error) {
     core.setFailed(error.message);
