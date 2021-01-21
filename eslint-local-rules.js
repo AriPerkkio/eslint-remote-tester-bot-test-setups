@@ -13,10 +13,10 @@ module.exports = {
         create: function (context) {
             return {
                 Identifier: function (node) {
-                    if (node.name === 'foo') {
+                    if (node.name === 'p') {
                         context.report({
                             node,
-                            message: 'Variable name "foo" is not allowed.'
+                            message: 'Variable name "p" is not allowed.'
                         })
                     }
                 },
