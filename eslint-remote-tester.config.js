@@ -3,6 +3,7 @@ module.exports = {
     extensions: ['.js'],
     rulesUnderTesting: ['local-rules/no-foo'],
     compare: true,
+    CI: false,
     eslintrc: {
         root: true,
         plugins: ['eslint-plugin-local-rules'],
