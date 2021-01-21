@@ -13,6 +13,6 @@ jobs:
         with:
           node-version: 12.11
       - run: yarn install
-      - uses: AriPerkkio/eslint-remote-tester-compare-action@master
+      - uses: AriPerkkio/eslint-remote-tester-compare-action@feat/initial-version
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
