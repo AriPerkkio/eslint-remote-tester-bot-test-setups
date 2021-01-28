@@ -300,10 +300,10 @@ eslint-plugin-local-rules@^1.0.1:
   resolved "https://registry.yarnpkg.com/eslint-plugin-local-rules/-/eslint-plugin-local-rules-1.0.1.tgz#1a1f2659ad9297ea82a469d1f5b92b26d90ea3b0"
   integrity sha512-spxkMBos6/ekNxO7khP2zj0j+tdNIhc3GWjXX397L/5R4ZM5huAIks6ADlZVRyiyUKbo/ABJgH/iP6cu9YYnyg==
 
-eslint-remote-tester@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/eslint-remote-tester/-/eslint-remote-tester-0.5.0.tgz#68695f68dee18b55c163ec0ddbaaada4d928f2a7"
-  integrity sha512-+Ko/ZX3XZ9lj48sGKli7nwqMtUIKBhO9YRyBhw2cJbwduw/lLGBYbhGNJj7TXl33ArQPmz9Iza1f7fl/IM1fpA==
+eslint-remote-tester@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/eslint-remote-tester/-/eslint-remote-tester-0.6.0.tgz#2e567b4c5bb536587b2095e23fb9bdd5c59dd7db"
+  integrity sha512-N1IoeU68g+wQ1yIoUCzEKjkUlQSwro8gX88o9u1oEKBKR3h1vEIPzkesJlUlYjgBKrQcLan4MjzIkRR9ggDV9Q==
   dependencies:
     chalk "^4.1.0"
     ink "^3.0.8"
@@ -452,9 +452,9 @@ flat-cache@^3.0.4:
     rimraf "^3.0.2"
 
 flatted@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.1.0.tgz#a5d06b4a8b01e3a63771daa5cb7a1903e2e57067"
-  integrity sha512-tW+UkmtNg/jv9CSofAKvgVcO7c2URjhTdW1ZTkcAritblu8tajiYy7YisnIflEwtKssCtOxpnBRoCB7iap0/TA==
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.1.1.tgz#c4b489e80096d9df1dfc97c79871aea7c617c469"
+  integrity sha512-zAoAQiudy+r5SvnSw3KJy5os/oRJYHzrzja/tBDqrZtNhUw8bt6y8OBzMWcjWr+8liV8Eb6yOhw8WZ7VFZ5ZzA==
 
 fs.realpath@^1.0.0:
   version "1.0.0"
