@@ -7,7 +7,7 @@ on:
 jobs:
   compare:
     runs-on: ubuntu-latest
-    if: contains(github.event.comment.body, '/@github-actions eslint-remote-tester compare/')
+    if: contains(github.event.comment.body, '@github-actions eslint-remote-tester compare')
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
