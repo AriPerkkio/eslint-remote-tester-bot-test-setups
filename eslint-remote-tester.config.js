@@ -1,3 +1,4 @@
+/** @type {import('eslint-remote-tester/dist/config/types').Config} */
 module.exports = {
     repositories: ['AriPerkkio/eslint-remote-tester-integration-test-target'],
     extensions: ['.js'],
