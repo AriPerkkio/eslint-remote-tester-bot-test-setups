@@ -17,3 +17,10 @@ jobs:
       - uses: AriPerkkio/eslint-remote-tester-run-action@feat/initial
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-title: "Results of weekly scheduled smoke test"
+          eslint-remote-tester-config: eslint-remote-tester.config smoke.js
+          max-result-count: 2
+          repository-initialize-command: |
+            echo "Installing"
+            yarn install
+            echo "Done"
