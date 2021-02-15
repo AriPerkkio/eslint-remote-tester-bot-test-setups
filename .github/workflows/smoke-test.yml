@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: 12.11
       - run: yarn install
-      - uses: AriPerkkio/eslint-remote-tester-run-action@master
+      - uses: AriPerkkio/eslint-remote-tester-run-action@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           issue-title: "Results of weekly scheduled smoke test"
