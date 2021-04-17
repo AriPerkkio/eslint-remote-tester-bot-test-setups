@@ -15,9 +15,8 @@ jobs:
         with:
           node-version: 12.11
       - run: yarn install
-      - uses: AriPerkkio/eslint-remote-tester-run-action@v1
+      - uses: AriPerkkio/eslint-remote-tester-run-action@fix/node-version
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
           issue-title: "Results of weekly scheduled smoke test"
           eslint-remote-tester-config: eslint-remote-tester.config smoke.js
           max-result-count: 2
