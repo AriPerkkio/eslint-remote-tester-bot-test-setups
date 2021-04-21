@@ -4,7 +4,7 @@ const { getRepositories, getPathIgnorePattern } = require("eslint-remote-tester-
 module.exports = {
   repositories: [
     "AriPerkkio/eslint-remote-tester-integration-test-target",
-    getRepositories({ randomize: true }).slice(0, 2),
+    ...getRepositories({ randomize: true }).slice(0, 2),
   ],
   pathIgnorePattern: getPathIgnorePattern(),
   extensions: [".js"],
