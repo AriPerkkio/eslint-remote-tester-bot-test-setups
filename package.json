@@ -10,7 +10,7 @@
     "eslint": "^7.18.0",
     "eslint-plugin-local-rules": "^1.0.1",
     "eslint-remote-tester": "^1.0.1",
-    "eslint-remote-tester-repositories": "^0.0.1"
+    "eslint-remote-tester-repositories": "0.0.2"
   },
   "dependencies": {}
 }
