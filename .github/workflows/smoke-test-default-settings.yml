@@ -1,15 +1,15 @@
 name: Smoke test with default settings
 
 on:
-  workflow_dispatch:
+    workflow_dispatch:
 
 jobs:
-  smoke:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 14
-      - run: yarn install
-      - uses: AriPerkkio/eslint-remote-tester-run-action@fix/javascript-in-user-configurations
+    smoke:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: 14
+            - run: yarn install
+            - uses: AriPerkkio/eslint-remote-tester-run-action@feat/count-of-repos
