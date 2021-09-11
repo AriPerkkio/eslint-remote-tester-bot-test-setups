@@ -333,10 +333,10 @@ eslint-remote-tester-repositories@0.0.2:
   resolved "https://registry.yarnpkg.com/eslint-remote-tester-repositories/-/eslint-remote-tester-repositories-0.0.2.tgz#be5910c81e2b4e63140180c09cd1d15863627a3a"
   integrity sha512-lKvRwJBlW4q7dBT3FFFzUAEn+UY8Ac4oz/2sWEoS5R1he/EI4oTJPUtqWOE6p8nrJWh8GCDcZcOilYPxTWVFbQ==
 
-eslint-remote-tester@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-remote-tester/-/eslint-remote-tester-1.3.0.tgz#66b9a77a3b5b873c4c00626363f047f7543b8ca8"
-  integrity sha512-5FHcQhAv2p3Z8u+mYJrLZEJOyWek4B/kChNuLI4Z7fUtV/RNSkLa0trv5yOnfOOBuVpcZOkINKU6pq56NdU4bg==
+eslint-remote-tester@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/eslint-remote-tester/-/eslint-remote-tester-1.3.1.tgz#7b637402439bd12c2ed51cc662f81e537b3903da"
+  integrity sha512-g/NjLc4zgFv/7u16Hlb3wCeOh2Fntoal5QAf5dneT3wEnVkWrWqgTIXzoO2OAnBR2AxWBuvwFH7teNKcE7hkbA==
   dependencies:
     "@babel/code-frame" "^7.12.13"
     JSONStream "^1.3.5"
