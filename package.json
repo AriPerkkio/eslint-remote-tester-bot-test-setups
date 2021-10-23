@@ -7,7 +7,7 @@
     "lint": "eslint-remote-tester"
   },
   "devDependencies": {
-    "eslint": "7.32.0",
+    "eslint": "^8.1.0",
     "eslint-plugin-local-rules": "^1.0.1",
     "eslint-remote-tester": "^2.0.0",
     "eslint-remote-tester-repositories": "0.0.2"
