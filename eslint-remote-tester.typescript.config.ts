@@ -13,6 +13,7 @@ const config: Config = {
   pathIgnorePattern: getPathIgnorePattern(),
   extensions: [".js"],
   //rulesUnderTesting: ["local-rules/no-foo"],
+  // @ts-ignore
   rulesUnderTesting: "some-text",
   compare: true,
   CI: false,
