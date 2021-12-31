@@ -11,7 +11,8 @@ module.exports = {
     ],
     pathIgnorePattern: getPathIgnorePattern(),
     extensions: [".js"],
-    rulesUnderTesting: ["local-rules/no-foo"],
+    //rulesUnderTesting: ["local-rules/no-foo"],
+    rulesUnderTesting: 'some text',
     compare: true,
     CI: false,
     eslintrc: {
