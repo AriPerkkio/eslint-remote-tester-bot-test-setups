@@ -12,4 +12,4 @@ jobs:
         with:
           node-version: 14
       - run: yarn install
-      - uses: AriPerkkio/eslint-remote-tester-run-action@v2
+      - uses: AriPerkkio/eslint-remote-tester-run-action@feat/support-ts-configs
