@@ -1,4 +1,4 @@
-name: Smoke test
+name: Smoke test typescript
 
 on:
   workflow_dispatch:
