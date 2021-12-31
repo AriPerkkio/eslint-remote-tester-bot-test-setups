@@ -12,9 +12,7 @@ const config: Config = {
   ],
   pathIgnorePattern: getPathIgnorePattern(),
   extensions: [".js"],
-  //rulesUnderTesting: ["local-rules/no-foo"],
-  // @ts-ignore
-  rulesUnderTesting: "some-text",
+  rulesUnderTesting: ["local-rules/no-foo"],
   compare: true,
   CI: false,
   eslintrc: {
