@@ -12,7 +12,8 @@ jobs:
         with:
           node-version: 14
       - run: yarn install
-      - uses: AriPerkkio/eslint-remote-tester-run-action@feat/support-ts-configs
+      - uses: AriPerkkio/eslint-remote-tester-run-action@feat/issue-label
         with:
           issue-title: "Results of weekly scheduled smoke test"
+          # issue-label: "smoke-test-123"
           eslint-remote-tester-config: eslint-remote-tester.config.smoke.js
