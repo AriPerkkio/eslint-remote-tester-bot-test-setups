@@ -7,11 +7,18 @@ jobs:
   smoke:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+
+      - name: Set node version to 20
+        uses: actions/setup-node@v4
         with:
-          node-version: 14
-      - run: yarn install
+          node-version: 20
+
+      - run: pnpm install
+
       - uses: AriPerkkio/eslint-remote-tester-run-action@v4
         with:
           issue-title: "Results of weekly scheduled smoke test"
