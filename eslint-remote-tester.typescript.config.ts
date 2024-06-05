@@ -1,9 +1,13 @@
 import type { Config } from "eslint-remote-tester";
+import { FlatCompat } from "@eslint/eslintrc";
 
 import {
   getRepositories,
   getPathIgnorePattern,
 } from "eslint-remote-tester-repositories";
+
+console.log("Typescript config loaded");
+const compat = new FlatCompat({ baseDirectory: process.cwd() });
 
 const config: Config = {
   repositories: [
@@ -15,13 +19,10 @@ const config: Config = {
   rulesUnderTesting: ["local-rules/no-foo"],
   compare: true,
   CI: false,
-  eslintrc: {
-    root: true,
-    plugins: ["eslint-plugin-local-rules"],
-    rules: {
-      "local-rules/no-foo": "error",
-    },
-  },
+  eslintConfig: [
+    ...compat.plugins("eslint-plugin-local-rules"),
+    { rules: { "local-rules/no-foo": "error" } },
+  ],
 };
 
 export default config;

@@ -1,10 +1,13 @@
-const {
+import { FlatCompat } from "@eslint/eslintrc";
+import {
   getRepositories,
   getPathIgnorePattern,
-} = require("eslint-remote-tester-repositories");
+} from "eslint-remote-tester-repositories";
 
-/** @type {import('eslint-remote-tester/dist/config/types').Config} */
-module.exports = {
+const compat = new FlatCompat({ baseDirectory: process.cwd() });
+
+/** @type {import('eslint-remote-tester').Config} */
+const config = {
   repositories: [
     "AriPerkkio/eslint-remote-tester-integration-test-target",
     ...getRepositories({ randomize: true }).slice(0, 2),
@@ -14,11 +17,10 @@ module.exports = {
   rulesUnderTesting: ["local-rules/no-foo"],
   compare: true,
   CI: false,
-  eslintrc: {
-    root: true,
-    plugins: ["eslint-plugin-local-rules"],
-    rules: {
-      "local-rules/no-foo": "error",
-    },
-  },
+  eslintConfig: [
+    ...compat.plugins("eslint-plugin-local-rules"),
+    { rules: { "local-rules/no-foo": "error" } },
+  ],
 };
+
+export default config;
