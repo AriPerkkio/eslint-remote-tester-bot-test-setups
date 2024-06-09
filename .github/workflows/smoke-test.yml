@@ -19,7 +19,7 @@ jobs:
 
       - run: pnpm install
 
-      - uses: AriPerkkio/eslint-remote-tester-run-action@feat/eslint-remote-tester-v4
+      - uses: AriPerkkio/eslint-remote-tester-run-action@master
         with:
           issue-title: "Results of weekly scheduled smoke test"
           issue-label: "smoke-test-123"
